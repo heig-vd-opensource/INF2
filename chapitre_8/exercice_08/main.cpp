@@ -1,9 +1,4 @@
-# Exercice 8
-## Spécialisations
 
-Que va afficher, à l'execution, le programme ci-dessous ? 
-
-```cpp
 #include <cstdlib>
 #include <iostream>
 
@@ -22,20 +17,22 @@ void C<T>::afficher() const {
     cout << t;
 }
 
+
 int main() {
     int n = 1;
-    
+ 
     C<int> c1(n);
     c1.afficher();
     cout << endl;
-    
+
     C<int*> c2(&n);
     c2.afficher();
     cout << endl;
+
     C<const char*> c3("Hello");
-    
     c3.afficher();
     cout << endl;
+
     return EXIT_SUCCESS;
 }
-```
+
