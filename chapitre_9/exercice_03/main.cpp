@@ -1,9 +1,3 @@
-# Exercice 3
-## try / catch (3)
-
-Que va produire, à l'exécution, le programme ci-dessous ?
-
-```cpp
 #include <cstdlib>
 #include <iostream>
 
@@ -38,4 +32,3 @@ int main() {
     
     return EXIT_SUCCESS;
 }
-```
