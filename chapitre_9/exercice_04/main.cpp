@@ -1,9 +1,3 @@
-# Exercice 4
-## try / catch (4)
-
-Que va produire, à l'exécution, le programme ci-dessous ?
-
-```cpp
 #include <cstdlib>
 #include <iostream>
 #include <stdexcept>
@@ -36,4 +30,3 @@ int main() {
 
     return EXIT_SUCCESS;
 }
-```
