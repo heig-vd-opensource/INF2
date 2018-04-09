@@ -74,5 +74,35 @@ return x < y ? x : y; \
 }
 ```
 
+### printf
+
+* %d -> digit (int)
+* %i -> digit (int)
+* %s -> string (const char \*)
+* %f -> float/double
+* %c -> char
+* %lld -> long long
+* %<espacement>d -> digit afficher sur 4 espaces
+* printf(%\*d, FORMAT, monEntier)  -> pour faire avec constante
+* printf(%10.3d, monFloat) -> 10, dont 3 apres virgule (point compte)
+
+> est suceptible aux debordements
+
+### scanf
+
+__syntaxe:__
+```c
+int valeur;
+int retour;
+printf("\nsaisie: ");
+retour = scanf("%d", &valeur);
+printf("valeur = %d", valeur);
+printf("retour = %d", retour);
+getchar()
+getchar()
+```
+
+
+
 
 
