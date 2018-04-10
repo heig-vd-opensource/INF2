@@ -24,6 +24,7 @@ public:
      */
     Objet();  // par défaut
     Objet(unsigned int days, unsigned int month=0, string name="test");
+    Objet(const C&); // constructeur par copie
 
     /*
      * Destructeurs
@@ -41,20 +42,26 @@ public:
     /*
      * surcharge d'operateurs membres
      */
-    // operateurs calcul
+    // ahrithmetic (+, -, *, /, %)
     Objet operator * (const Objet& objet, double lhs);
 
-    // modifie l'objet
+    // compounds (+=, -=, *=, /=, %=, ...)
     Objet& operator+=(const Objet& rhs);
+    // incr, decrement
     Objet& operator++();  // pré-incrementation
     Objet operator++(int);  // post-incrementation
 
-    // operateurs relationnels
+    // operateurs relationnels, comparaison
     bool operator < (const Objet& lhs, const Objet& rhs) const;
     bool operator > (const Objet& lhs, const Objet& rhs) const;
+    bool operator <= (const Objet& lhs, const Objet& rhs) const;
+    bool operator >= (const Objet& lhs, const Objet& rhs) const;
     bool operator == (const Objet& lhs, const Objet& rhs) const;
     bool operator != (const Objet& lhs, const Objet& rhs) const;
 
+    /*
+     * fonction statique
+     */
 
 private:
     /*
@@ -67,6 +74,8 @@ private:
     /**
      * Données statiques
      */
+    static s_nbrInstance;
+    static const CONSTANTE_STATIQUE;
 }
 
 # endif /* _CLASS_H_ */
