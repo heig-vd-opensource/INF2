@@ -24,7 +24,7 @@ public:
      */
     Objet();  // par défaut
     Objet(unsigned int days, unsigned int month=0, string name="test");
-    Objet(const C&); // constructeur par copie
+    Objet(const Objet&); // constructeur par copie
 
     /*
      * Destructeurs
@@ -50,6 +50,8 @@ public:
     // incr, decrement
     Objet& operator++();  // pré-incrementation
     Objet operator++(int);  // post-incrementation
+    Objet& operator++();
+    Objet operator++(int);
 
     // operateurs relationnels, comparaison
     bool operator < (const Objet& lhs, const Objet& rhs) const;
