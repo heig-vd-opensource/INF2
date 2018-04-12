@@ -43,26 +43,46 @@ public:
      * surcharge d'operateurs membres
      */
     // ahrithmetic (+, -, *, /, %)
-    Objet operator * (double lhs);
+    Objet operator * (double rhs);
+
+    Objet operator + (double rhs){
+        m_days = m_days + rhs;
+        return this;
+    }
 
     // compounds (+=, -=, *=, /=, %=, ...)
     Objet& operator+=(const Objet& rhs);
     // incr, decrement
+    // pre-incrementation
     Objet& operator++(){
         this = this + 1;
         return *this;
-    }  // pré-incrementation
-    Objet operator++(int);  // post-incrementation
-    Objet& operator++();
-    Objet operator++(int);
+    }
+    //post incrementation
+    Objet operator++(int){
+        Objet tmp(this);
+        this = this + 1;
+        return tmp;
+    }
 
-    // operateurs relationnels, comparaison
+    Objet& operator--();
+    Objet operator--(int);
+
+    // operateurs relationnels, comparaison --->> METTRE EN FRIEND
     bool operator < (const Objet& lhs, const Objet& rhs) const;
-    bool operator > (const Objet& lhs, const Objet& rhs) const;
-    bool operator <= (const Objet& lhs, const Objet& rhs) const;
-    bool operator >= (const Objet& lhs, const Objet& rhs) const;
+    bool operator > (const Objet& lhs, const Objet& rhs) const {
+        return rhs < lhs;
+    }
+    bool operator <= (const Objet& lhs, const Objet& rhs) const {
+        return !(lhs > rhs);
+    }
+    bool operator >= (const Objet& lhs, const Objet& rhs) const {
+        return !(lhs < rhs);
+    }
     bool operator == (const Objet& lhs, const Objet& rhs) const;
-    bool operator != (const Objet& lhs, const Objet& rhs) const;
+    bool operator != (const Objet& lhs, const Objet& rhs) const {
+        return !(lhs == rhs);
+    }
 
     /*
      * fonction statique
