@@ -45,7 +45,7 @@ public:
     // ahrithmetic (+, -, *, /, %)
     Objet operator * (double rhs);
 
-    Objet operator + (double rhs){
+    Objet operator + (int rhs){
         m_days = m_days + rhs;
         return this;
     }

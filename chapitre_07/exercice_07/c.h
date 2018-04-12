@@ -8,8 +8,8 @@ using namespace std;
 class C {
 friend ostream& operator<<(ostream& lhs, const C& rhs);
 friend C operator+(C lhs, const C& rhs);
-friend bool operator==(const C& lhs, const C& rhs);
-friend bool operator!=(const C& lhs, const C& rhs);
+friend bool operator==(const C& lhs, const C& rhs) const;
+friend bool operator!=(const C& lhs, const C& rhs) const;
 
 public:
     C(int i=0);

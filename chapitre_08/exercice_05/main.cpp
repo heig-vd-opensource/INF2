@@ -24,7 +24,9 @@ int main(){
     B<int, int, N> b2;
 
     // 3)
-    B<int, double, 'A'> b3;
+    int n = 1;
+    //B<int, double, n> b3;
+    // error: n pas constant
 
     // 4)
     B<int, double, 'A'> b4;

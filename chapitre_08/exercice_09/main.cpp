@@ -1,4 +1,4 @@
-#include <cstdllib>
+#include <cstdlib>
 #include <vector>
 #include <list>
 #include <iostream>
@@ -6,4 +6,7 @@
 
 using namespace std;
 
-template<typename T, >
+int main (){
+    
+    return EXIT_SUCCESS;
+}

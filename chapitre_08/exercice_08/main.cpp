@@ -17,6 +17,10 @@ void C<T>::afficher() const {
     cout << t;
 }
 
+template <>
+void C<int*>::afficher() const {
+    cout << *t;
+}
 
 int main() {
     int n = 1;

@@ -62,5 +62,6 @@ int main() {
 
     afficherCoutTrajet(v.coutTrajet(200));
     afficherVoiture(v);
+
     return EXIT_SUCCESS;
 }

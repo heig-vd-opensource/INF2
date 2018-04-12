@@ -7,9 +7,12 @@ using namespace std;
 template <typename T, size_t n> class Array {
 public:
     Array(const T& valeur);
+    
     void afficher()const ;
+    
     template<typename X, size_t y>
     friend void abcd(const Array<X, y>& array);
+
     template<typename Q, size_t r>
     friend ostream &operator << (ostream& os, const Array<Q, r>& array);
 private:
