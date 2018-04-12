@@ -2,7 +2,7 @@
 # define _CLASS_H_
 
 // includes
-#include <strings>
+#include <string>
 #include <iostream>
 #include <iomanip>
 #include <vector>
@@ -16,7 +16,7 @@ class Objet {
      */
     // operateurs de flux
     friend ostream& operator<<(ostream& os, const Objet& objet);
-    friend instream& operator>>(instream& in, Objet& objet);
+    friend instream& operator>>(const instream& in, Objet& objet);
 
 public:
     /*
@@ -43,12 +43,15 @@ public:
      * surcharge d'operateurs membres
      */
     // ahrithmetic (+, -, *, /, %)
-    Objet operator * (const Objet& objet, double lhs);
+    Objet operator * (double lhs);
 
     // compounds (+=, -=, *=, /=, %=, ...)
     Objet& operator+=(const Objet& rhs);
     // incr, decrement
-    Objet& operator++();  // pré-incrementation
+    Objet& operator++(){
+        this = this + 1;
+        return *this;
+    }  // pré-incrementation
     Objet operator++(int);  // post-incrementation
     Objet& operator++();
     Objet operator++(int);
