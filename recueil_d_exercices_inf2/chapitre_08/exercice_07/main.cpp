@@ -11,7 +11,7 @@ public:
     void afficher()const ;
     
     template<typename X, size_t y>
-    friend void abcd(const Array<X, y>& array);
+    friend void abcd <>(const Array<X, y>& array);
 
     template<typename Q, size_t r>
     friend ostream &operator << <>(ostream& os, const Array<Q, r>& array);
