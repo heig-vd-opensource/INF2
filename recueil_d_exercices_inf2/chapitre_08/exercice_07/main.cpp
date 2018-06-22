@@ -14,13 +14,13 @@ public:
     friend void abcd(const Array<X, y>& array);
 
     template<typename Q, size_t r>
-    friend ostream &operator << (ostream& os, const Array<Q, r>& array);
+    friend ostream &operator << <>(ostream& os, const Array<Q, r>& array);
 private:
     T tab[n];
 };
 
 template <typename T, size_t n>
-ostream &operator <<(ostream &os, const Array<T, n> &array){
+ostream &operator << <>(ostream &os, const Array<T, n> &array){
     for(size_t i=0; i < n; ++i){
         os << array.tab[i];
     }
